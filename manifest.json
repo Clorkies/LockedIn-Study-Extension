@@ -1,0 +1,39 @@
+{
+  "name": "LockedIn Study Focus",
+  "version": "1.0.0",
+  "description": "LockedIn helps you focus on studying by displaying a focus reminder when accessing distracting websites.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "*://*.facebook.com/*",
+    "*://*.instagram.com/*",
+    "*://*.roblox.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.facebook.com/*",
+        "*://*.instagram.com/*",
+        "*://*.roblox.com/*"
+      ],
+      "js": ["src/contentScript.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "16": "src/assets/locked_in_16.png",
+      "48": "src/assets/locked_in_48.png",
+      "128": "src/assets/locked_in_128.png"
+    }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["src/assets/*"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "manifest_version": 3
+}
