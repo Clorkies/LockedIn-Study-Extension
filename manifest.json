@@ -15,7 +15,8 @@
         "*://*.instagram.com/*",
         "*://*.roblox.com/*"
       ],
-      "js": ["src/contentScript.js"]
+      "js": ["src/contentScript.js"],
+      "css": ["src/modal/modal.css"]
     }
   ],
   "action": {
@@ -28,7 +29,10 @@
   },
   "web_accessible_resources": [
     {
-      "resources": ["src/assets/*"],
+      "resources": [
+        "src/assets/*",
+        "src/modal/*"
+      ],
       "matches": ["<all_urls>"]
     }
   ],

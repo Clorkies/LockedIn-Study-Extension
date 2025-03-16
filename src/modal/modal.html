@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LockedIn Study Mode</title>
+        <link rel="stylesheet" href="modal.css">
+    </head>
+    <body>
+        <div id="lockedin-popup" class="overlay">
+            <div class="popup-container">
+                <div class="header">
+                    <div class="logo">
+                        <img src="../assets/locked_in.png" alt="Locked in logo" class="logo-img">
+                    </div>
+                    <button id="lockedin-close-btn" class="close-btn">✕</button>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <div class="warning-box">
+                    <div class="warning-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                        </svg>
+                    </div>
+                    <div class="warning-content">
+                        <h2>WARNING</h2>
+                        <p>You are entering a 'locked out' website while on study mode.</p>
+                    </div>
+                </div>
+                
+                <div class="recommended-section">
+                    <h3>Recommended websites</h3>
+                    <div class="site-buttons">
+                        <button class="lockedin-site" data-url="https://lair.education">
+                            <img src="../assets/recommended/lair-logo.png" alt="Lair Icon">
+                            <span>LAIR</span>
+                        </button>
+                        <button class="lockedin-site" data-url="https://codechum.com">
+                            <img src="../assets/recommended/codechum-logo.ico" alt="Codechum Icon">
+                            <span>Code</span>
+                        </button>
+                        <button class="lockedin-site" data-url="https://teams.microsoft.com">
+                            <img src="../assets/recommended/teams-logo.png" alt="Teams Icon">
+                            <span>Teams</span>
+                        </button>
+                        <button class="lockedin-site" data-url="https://notion.so">
+                            <img src="../assets/recommended/notion-logo.png" alt="Notion Icon">
+                            <span>Notion</span>
+                        </button>
+                        <button class="lockedin-site" data-url="https://calendar.google.com">
+                            <img src="../assets/recommended/gcalendar-logo.png" alt="GCalendar Icon">
+                            <span>Calendar</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <button id="lockedin-proceed-btn" class="proceed-btn">
+                    PROCEED
+                    <div class="proceed-subtitle">Not recommended</div>
+                </button>
+            </div>
+        </div>
+    </body>
+</html>
