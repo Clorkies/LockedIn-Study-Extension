@@ -2,7 +2,8 @@ chrome.storage.local.get(["studyMode"], (data) => {
   const showPopup = data.studyMode !== false;
   
   if (showPopup) {
-    createWarningPopup();
+    const modal = new LockedInModal();
+    modal.initialize();
   }
 });
 

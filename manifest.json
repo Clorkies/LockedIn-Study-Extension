@@ -4,18 +4,20 @@
   "description": "LockedIn helps you focus on studying by displaying a focus reminder when accessing distracting websites.",
   "permissions": ["storage"],
   "host_permissions": [
-    "*://*.facebook.com/*",
-    "*://*.instagram.com/*",
-    "*://*.roblox.com/*"
+    "<all_urls>"
   ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; style-src 'self' https://cdnjs.cloudflare.com https://fonts.googleapis.com https://fonts.gstatic.com;"
+  },
   "content_scripts": [
     {
       "matches": [
         "*://*.facebook.com/*",
         "*://*.instagram.com/*",
-        "*://*.roblox.com/*"
+        "*://*.roblox.com/*",
+        "*://*.notion.com/*"
       ],
-      "js": ["src/contentScript.js"],
+      "js": ["src/modal/modal.js", "src/contentScript.js"],
       "css": ["src/modal/modal.css"]
     }
   ],
@@ -39,5 +41,10 @@
   "background": {
     "service_worker": "src/background.js"
   },
-  "manifest_version": 3
+  "manifest_version": 3,
+  "icons": {
+    "16": "src/assets/locked_in_16.png",
+    "48": "src/assets/locked_in_48.png",
+    "128": "src/assets/locked_in_128.png"
+  }
 }
