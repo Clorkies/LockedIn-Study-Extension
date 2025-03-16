@@ -12,7 +12,7 @@
 
 ## 🎯 Overview
 
-LockedIn is a powerful Chrome extension designed to boost your productivity and help you maintain focus during study sessions. By providing timely reminders when you attempt to access distracting websites, LockedIn keeps you on track with your learning goals.
+LockedIn is a browser extension designed to boost your productivity and help you maintain focus during study sessions. By providing reminders when you attempt to access distracting websites, LockedIn keeps you on track with your learning goals.
 
 ## ✨ Key Features
 
